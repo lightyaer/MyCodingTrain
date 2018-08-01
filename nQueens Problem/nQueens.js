@@ -1,20 +1,19 @@
+let perfectPositions = [];
 
 let nQueens = function (n) {
-
     if (n <= 0) return "No Solution!";
-    var perfectPositions = [];
-    let hasSolution = placeQueen(n, 0, perfectPositions);
+    let hasSolution = placeQueen(n, 0);
     return hasSolution ? perfectPositions : "No Solution!";
 }
 
-let placeQueen = function (n, row, perfectPositions) {
+let placeQueen = function (n, row) {
     if (n === row) return true;
     for (var col = 0; col < n; col++) {
         let foundSafe = true;
         for (var queen = 0; queen < row; queen++) {
-            let ArrOfQueenCol = perfectPositions[queen][col];
-            let ArrOfQueenRow = perfectPositions[queen][row];
-            if (ArrOfQueenCol === col || Math.abs(ArrOfQueenRow - row) === Math.abs(ArrOfQueenCol - col)) {
+            let colOfQueenToBeChecked = perfectPositions[queen][1];
+            let rowOfQueenToBeChecked = perfectPositions[queen][0];
+            if (colOfQueenToBeChecked === col || Math.abs(rowOfQueenToBeChecked - row) === Math.abs(colOfQueenToBeChecked - col)) {
                 foundSafe = false;
                 break;
             }
@@ -27,7 +26,8 @@ let placeQueen = function (n, row, perfectPositions) {
             }
         }
     }
+    perfectPositions.pop();
     return false;
 }
 
-console.log(nQueens(4));
+console.log(nQueens(8));

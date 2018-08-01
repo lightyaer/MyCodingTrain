@@ -1,3 +1,6 @@
+//Found this on github by jthomas
+//Way too comlpicated for me.. tried to trace it.
+
 var iterations = 0
 
 

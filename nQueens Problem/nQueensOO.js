@@ -34,6 +34,7 @@ let placeQueen = function (n, row, perfectPositions) {
             }
         }
     }
+    perfectPositions.pop();
     return false;
 }
 
