@@ -1,0 +1,23 @@
+{
+  "name": "mycodingtrain",
+  "version": "1.0.0",
+  "description": "to explore and solve problems independently.",
+  "main": "index.js",
+  "dependencies": {
+    "@tensorflow/tfjs": "^0.12.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lightyaer/MyCodingTrain.git"
+  },
+  "author": "Dhananjay Naik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lightyaer/MyCodingTrain/issues"
+  },
+  "homepage": "https://github.com/lightyaer/MyCodingTrain#readme"
+}
